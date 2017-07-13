@@ -1,0 +1,46 @@
+#sed
+#replace characters
+#the \ symbol is an way you can break up command for readability
+
+head -25 points_of_interest.csv | \
+cut -d',' -f1,2 | \
+
+# s = substitute, / = seds delimiter, ',' = what were replacing, '--->>' = what were putting in place
+sed 's/,/--->>/g'
+
+#replace larger peices of text Woods > Preserve
+head -25 points_of_interest.csv | \
+cut -d',' -f1,2 | \
+sed 's/Woods/Preserve/g'
+
+#sed works with regular expressions (regex)
+
+#delete empty lines
+sed '/^$/d'
+
+#insert a line before another line matching your pattern
+sed '/<pattern to match>/i'
+sed '/<pattern to match>/a'
+
+
+
+
+#date give you todays date
+
+date
+date +%D
+date +%Y-%m-%d' : '%A
+
+
+
+#join will join to files based on the first column
+wget https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/map%20data/trails.csv
+
+wget https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/map%20data/trails_desc.csv
+
+head -10 trails.csv | cut -d',' -f3,4 | sort > trails_subsest.csv
+head -10 trails_desc.csv | cut -d',' -f2 | sort > trails_desc_subset.csv
+
+join trails_subsest.csv trails_desc_subset.csv
+
+jq?
