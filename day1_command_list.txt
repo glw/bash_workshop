@@ -14,54 +14,54 @@ pwd
 
 mkdir data
 
-cp data.csv ./data
+cp points_of_interest.csv ./data
 
-cat data.csv
+cat points_of_interest.csv
 
-head data.csv
+head points_of_interest.csv
 
-tail data.csv
+tail points_of_interest.csv
 
-wc data.csv
+wc points_of_interest.csv
 
 wc -c
 wc -w
 wc -l
 wc -L
 
-head data.csv > first_ten_lines.csv
+head points_of_interest.csv > first_ten_lines.csv
 
 #append
-tail data.csv >> firest_ten_lines.csv
+tail points_of_interest.csv >> firest_ten_lines.csv
 
 ls
 
 cat first_ten_lines.csv
 
-head -100 data.csv
+head -100 points_of_interest.csv
 
 #get an exact line in a csv
-head -100 data.csv > tmp.cav
+head -100 points_of_interest.csv > tmp.cav
 tail -1 tmp.csv > 100.csv
 cat 100.csv
 
-head -100 data.csv | tail -1
+head -100 points_of_interest.csv | tail -1
 
-head -100 data.csv | wc -c
+head -100 points_of_interest.csv | wc -c
 
-cut -d',' -f1,2,3,4,5 data.csv
+cut -d',' -f1,2,3,4,5 points_of_interest.csv
 
 
-grep 'phrase' data.csv
+grep 'phrase' points_of_interest.csv
 
 #gives inverse of command
-grep -v 'phrase' data.csv
+grep -v 'phrase' points_of_interest.csv
 
 #not case sensitive
-grep -i 'phrase' data.csv
+grep -i 'phrase' points_of_interest.csv
 
 #include line number
-grep -n 'phrase' data.csv
+grep -n 'phrase' points_of_interest.csv
 
 cut -d',' -f2 points_of_interest.csv > points_names.csv
 
@@ -138,4 +138,4 @@ clear
 
 
 
-stolen entirely from https://data36.com/learn-data-analytics-bash-scratch/
+stolen almost entirely from https://data36.com/learn-data-analytics-bash-scratch/
