@@ -8,54 +8,83 @@ sudo apt-get install python-pip
 ```
 
 ### Install pip for python 3
-```sudo apt-get install python3-pip```
+```bash
+sudo apt-get install python3-pip
+```
 
 
 ### Install virtualenv and virtualenvwrapper
 
-```pip3 install virtualenv```
+```bash
+pip3 install virtualenv
+```
 
-```pip3 install virtualenvwrapper```
+```bash
+pip3 install virtualenvwrapper
+```
 
 ### Create a new environment for csvkit
 
-```mkvirtualenv csvkit```
+```bash
+mkvirtualenv csvkit
+```
 
 ### Search for library in pypi
-```pip search csvkit```
+```bash
+pip search csvkit
+```
 
 ### Install csvkit
-```pip install csvkit```
+```bash
+pip install csvkit
+```
 
 ### csvlook
-```head -25 points_of_interest.csv | cut -d',' -f1,2 |sort -t',' -k2 | csvlook```
+```bash
+head -25 points_of_interest.csv | cut -d',' -f1,2 |sort -t',' -k2 | csvlook
+```
 
 ### csvstat
-```head -25 points_of_interest.csv | cut -d',' -f1,2 |sort -t',' -k1 -n| csvstat```
+```bash
+head -25 points_of_interest.csv | cut -d',' -f1,2 |sort -t',' -k1 -n| csvstat
+```
 
 ### To see manual of almost any command use man
-```man grep```
+```bash
+man grep
+```
 
 ### Variables
-```x=2```
+```bash
+x=2
+```
 
-```echo $x```
+```bash
+echo $x
+```
 
 ### When creating variables in bash do not use spaces
 
 #### Example 1
-```food='hamburger'```
+```bash
+food='hamburger'```
 
-```drink='chocolate shake'```
+```bash
+drink='chocolate shake'
+```
 
-```echo 'I would like a' $food 'and a' $drink```
+```bash
+echo 'I would like a' $food 'and a' $drink
+```
 
 #### Example 2
-```a=3```
+```bash 
+a=3
 
-```b=$((x+a))```
+b=$((x+a))
 
-```echo $b```
+echo $b
+```
 
 
 ---
@@ -66,42 +95,39 @@ sudo apt-get install python-pip
 ### While loop
 ```bash
 i=0
-
 while
-
 [ $i -lt 4 ]
-
 do
-
 echo $i
-
 i=$((i + 1))
-
 done
-
+```
 
 ### If statements
-```i=2```
-
-```if (( $i % 2 == 0 ))```
-
-```then```
-
-```echo 'even'```
-
-```else```
-
-```echo 'odd'```
-```fi```  << means end of statement
+```bash
+i=2
+if (( $i % 2 == 0 ))
+then
+echo 'even'
+else
+echo 'odd'
+fi  << means end of statement
+```
 
 ### Dynamic input
-```touch dynamic_input.sh```
-
-```chmod 777 dynamic_input.sh```
-
-```nano dynamic_input.sh``` (assuming nano is installed. if not sudo apt-get install nano)
-
+```bash
+touch dynamic_input.sh
 ```
+
+```bash
+chmod 777 dynamic_input.sh
+```
+
+```bash
+nano dynamic_input.sh << (assuming nano is installed. if not sudo apt-get install nano)
+``` 
+
+```bash
 #!/usr/bin/env bash
 i=$1
 if (( $i % 2 == 0 ))
@@ -117,24 +143,30 @@ fi
 ### Run script
 
 #### Try
-```./dynamic_input.sh 6```
+```bash
+./dynamic_input.sh 6
+```
 
-```./dynamic_input.sh 7```
+```bash
+./dynamic_input.sh 7
+```
 
 
 ### For loops
-```
+```bash
 for i in *.txt
 do echo "$i"
 done
 ```
 
 ### If doing this on one line ';' are necessary
-```for i in *.txt; do echo "$i"; done```
+```bash
+for i in *.txt; do echo "$i"; done
+```
 
 Another example
 
-```
+```bash
 for shp in *.shp
 do
 echo “Processing $shp”
@@ -144,6 +176,7 @@ done
 
 ### Random bonus command
 #### find
-#### This command recursively searches thru directories and copies all txt files into the parent diretory. For duplicates it will append a number to the file name so that no files are lost
+* This command recursively searches thru directories and copies all txt files into the parent diretory. 
+For duplicates it will append a number to the file name so that no files are lost
 
 find ./data/recursive_search/ -name '*.txt' -exec cp --backup=numbered -t ./ {} +
