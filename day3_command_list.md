@@ -38,7 +38,7 @@ date +%D
 date +%Y-%m-%d' : '%A
 ```
 
-#join will join to files based on the first column
+### Join will join to files based on the first column
 ```bash
 wget https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/map%20data/trails.csv
 
@@ -54,7 +54,7 @@ join trails_subsest.csv trails_desc_subset.csv
 ```
 
 ## A few extras
----
+
 
 ## Time
 
@@ -62,7 +62,7 @@ join trails_subsest.csv trails_desc_subset.csv
 
 ## Parallel 
 
-*Is a tool to improve performance by multithreading. Works well with gdal.
+* Is a tool to improve performance by multithreading. Works well with gdal.
 ```bash
 sudo apt-get install parallel
 time ls *.tif | parallel gdal2tiles.py --profile=mercator --zoom=11-15 --title=NZTopo50 {}
@@ -70,4 +70,5 @@ time ls *.tif | parallel gdal2tiles.py --profile=mercator --zoom=11-15 --title=N
 
 Next up...
 jq
+
 tmux
