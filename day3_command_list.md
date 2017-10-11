@@ -1,6 +1,6 @@
 # SED
 ### replace characters
-#### the \ symbol is an way you can break up command for readability
+#### the ```\``` symbol is an way you can break up command for readability
 ```bash
 head -25 points_of_interest.csv | \
 cut -d',' -f1,2 | \
