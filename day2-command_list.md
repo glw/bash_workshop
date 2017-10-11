@@ -23,6 +23,25 @@ pip3 install virtualenv
 pip3 install virtualenvwrapper
 ```
 
+* Once virtualenvwrapper is installed, edit your .bashrc file
+
+```bash
+sudo nano ~/.bashrc
+```
+
+```bash
+#add this to the end of the file
+#virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source /usr/local/bin/virtualenvwrapper.sh
+```
+
+* reload bash profile with...
+source ~/.bashrc
+
+
 ### Create a new environment for csvkit
 
 ```bash
