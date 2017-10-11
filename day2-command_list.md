@@ -64,19 +64,20 @@ sudo apt-get install python-pip
 
 
 ### While loop
-```i=0```
+```bash
+i=0
 
-```while```
+while
 
-```[ $i -lt 4 ]```
+[ $i -lt 4 ]
 
-```do```
+do
 
-```echo $i```
+echo $i
 
-```i=$((i + 1))```
+i=$((i + 1))
 
-```done```
+done
 
 
 ### If statements
