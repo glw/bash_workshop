@@ -1,6 +1,6 @@
 # Open terminal
 
-### terminal basics
+## Terminal basics
 
 ### make a directory
 ```bash
@@ -22,12 +22,12 @@ cd ..
 sudo apt-get install wget curl
 ```
 
-### wget
+### wget - download a file
 ```bash
 wget https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/map%20data/points_of_interest.csv
 ```
 
-### list files
+### ls - list files
 ```bash
 ls
 ```
@@ -66,7 +66,9 @@ rm *.txt
 ```
 
 ### Copy
+```bash
 cp points_of_interest.csv ./data
+```
 
 ### Quickly see a files content
 ```bash
@@ -154,7 +156,7 @@ grep -i 'phrase' points_of_interest.csv
 #### include line number
 ```bash
 grep -n 'phrase' points_of_interest.csv
-
+```
 
 ### Using CUT with csv's
 ```bash
@@ -238,7 +240,7 @@ touch bash-test.sh
 nano bash-test.sh
 ```
 
-#### Include this line when create a script for bash
+#### Include this line when creating a script for bash
 ```bash
 #!/usr/bin/env bash
 ```
@@ -248,7 +250,7 @@ echo 'print this message!'
 cut -d',' -f5 points_of_interest.csv | sort | uniq -c
 ```
 
-##### close and save in nano with <ctrl+x>, <y>, then <enter>
+##### close and save in nano with '<ctrl+x>', '<y>', then '<enter>'
 
 #### make sure the file is executable
 ```bash
@@ -266,7 +268,9 @@ history
 ```
 
 #### Use with grep to filter output
+```bash
 history | grep 'phrase'
+```
 
 ### Type clear to clear screen
 ```bash
