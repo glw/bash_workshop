@@ -67,7 +67,8 @@ echo $x
 
 #### Example 1
 ```bash
-food='hamburger'```
+food='hamburger'
+```
 
 ```bash
 drink='chocolate shake'
@@ -80,9 +81,7 @@ echo 'I would like a' $food 'and a' $drink
 #### Example 2
 ```bash 
 a=3
-
 b=$((x+a))
-
 echo $b
 ```
 
