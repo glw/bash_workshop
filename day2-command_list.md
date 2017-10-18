@@ -2,25 +2,27 @@
 
 ---
 
-### Install pip for python 2.x
+### Install pip for python
 ```bash
-sudo apt-get install python-pip
+wget https://bootstrap.pypa.io/get-pip.py
 ```
 
-### Install pip for python 3
 ```bash
-sudo apt-get install python3-pip
+python get-pip.py
 ```
+
+#### pip will work with any installed version of python 
+##### use -p or --python=python2.7 or --python3.5 option to specify version
 
 
 ### Install virtualenv and virtualenvwrapper
 
 ```bash
-pip3 install virtualenv
+pip -p python3.5 install virtualenv #use your installed version
 ```
 
 ```bash
-pip3 install virtualenvwrapper
+pip -p python3.5 install virtualenvwrapper
 ```
 
 * Once virtualenvwrapper is installed, edit your .bashrc file
