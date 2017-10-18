@@ -12,7 +12,8 @@ python get-pip.py
 ```
 
 #### pip will work with any installed version of python 
-##### use -p or --python=python2.7 or --python3.5 option to specify version
+
+* use -p or --python=python2.7 or --python3.5 option to specify version
 
 
 ### Install virtualenv and virtualenvwrapper
@@ -41,8 +42,9 @@ source /usr/local/bin/virtualenvwrapper.sh
 ```
 
 * reload bash profile with...
+```bash
 source ~/.bashrc
-
+```
 
 ### Create a new environment for csvkit
 
