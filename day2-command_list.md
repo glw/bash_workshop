@@ -202,3 +202,10 @@ done
 For duplicates it will append a number to the file name so that no files are lost
 
 find ./data/recursive_search/ -name '*.txt' -exec cp --backup=numbered -t ./ {} +
+
+#### copy 
+* All files within a txt file from one dir to another
+
+```bash
+cp $(<list.txt) new_folder
+```
