@@ -1,6 +1,4 @@
-# Open terminal
-
-## Terminal basics
+# Terminal basics
 
 ### make a directory
 ```bash
