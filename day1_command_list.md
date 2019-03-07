@@ -276,8 +276,10 @@ history | grep 'phrase'
 ```bash
 clear 
 ```
-
-
-
+### Bonus
+Copy a list of files to another folder
+```bash
+cp $(<list.txt) new_folder
+```
 
 stolen almost entirely from https://data36.com/learn-data-analytics-bash-scratch/
