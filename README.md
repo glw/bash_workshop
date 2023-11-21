@@ -1,1 +1,1 @@
-see txt files for examples.
+see markdown files for examples.
